@@ -51,9 +51,11 @@ public class ExportPDFToDOCX {
             ExportPDFOperation exportPdfOperation = ExportPDFOperation.createNew(ExportPDFTargetFormat.DOCX);
 
             // Set operation input from a local PDF file
-            FileRef sourceFileRef = FileRef.createFromLocalFile("src/main/resources/exportPDFInput.pdf");
+            // getting the inputs
+            String sourceFileRefInput = args[0];
+            FileRef sourceFileRef = FileRef.createFromLocalFile(String.format("src/main/resources/%s", sourceFileRefInput));
             exportPdfOperation.setInput(sourceFileRef);
-
+            
             // Execute the operation.
             FileRef result = exportPdfOperation.execute(executionContext);
 

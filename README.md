@@ -165,7 +165,7 @@ and ExportPDFToImagesOperation.java for supported export formats.
 The sample class ExportPDFToDOCX converts a PDF file to a DOCX file.
 
 ```$xslt
-mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.exportpdf.ExportPDFToDOCX
+mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.exportpdf.ExportPDFToDOCX -Dexec.args="input-example.pdf"
 ```
 
 #### Export a PDF file to a DOCX file (apply OCR on the PDF file)
